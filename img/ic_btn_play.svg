@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68.608 68.608">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #575757;
+        stroke-width: 0.5px;
+      }
+
+      .cls-2 {
+        fill: rgba(33,33,33,0.79);
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="ic_btn_play" transform="translate(-342 -242)">
+    <g id="Ellipse_225" data-name="Ellipse 225" class="cls-1" transform="translate(342 242)">
+      <circle class="cls-3" cx="34.304" cy="34.304" r="34.304"/>
+      <circle class="cls-4" cx="34.304" cy="34.304" r="34.054"/>
+    </g>
+    <path id="Path_206" data-name="Path 206" class="cls-2" d="M2290.2,1290.75c-.038-4.71-33.359-24.842-35.938-17.954s-2.173,24.776,0,35.679S2290.241,1295.46,2290.2,1290.75Z" transform="translate(-1891.91 -1014.295)"/>
+  </g>
+</svg>

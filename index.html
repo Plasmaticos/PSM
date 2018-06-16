@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Plasma Sound Maker</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  </head>
+  <body>    
+
+    <header>
+      <a href=""><h1>psm</h1></a>
+    </header>
+
+    <section class="page cadastro">
+        <div class="container">
+
+          <div class="input">
+              <label for="nome">Nome</label>
+              <input id="nomeMusica" type="text" name="nome" width="100%" placeholder="Digite um nome para sua musica">
+          </div>
+          <div class="input">
+              <label for="andamento">Andamento (bpm)</label> 
+              <input placeholder="30 - 240 bpm" name="andamento" type="number" min="30" max="240" class="input_andamento" required>
+          </div>
+
+          <div class="select-containers">
+              <h1>NOTA</h1> 
+              <div class="select-container">
+                  <select id="nota" size="6">
+                    <option value="Pausa 000.00">  Pausa</option>
+                    <optgroup label="3ª OITAVA">
+                        <option value="Dó   131 3">  Dó</option>
+                        <option value="Dó#  139 3">  Dó#</option>
+                        <option value="Ré   147 3">  Ré</option>
+                        <option value="Ré#  156 3">  Ré#</option>
+                        <option value="Mi   165 3">  Mi</option>
+                        <option value="Fá   175 3">  Fá</option>
+                        <option value="Fá#  185 3">  Fá#</option>
+                        <option value="Sol  196 3">  Sol</option>
+                        <option value="Sol# 208 3">  Sol#</option>
+                        <option value="Lá   220 3">  Lá</option>
+                        <option value="Lá#  233 3">  Lá#</option>
+                        <option value="Sí   247 3">  Sí</option>
+                    </optgroup>
+                    <optgroup label="4ª OITAVA">
+                        <option value="Dó   262 4">  Dó</option>
+                        <option value="Dó#  277 4">  Dó#</option>
+                        <option value="Ré   294 4">  Ré</option>
+                        <option value="Ré#  311 4">  Ré#</option>
+                        <option value="Mi   330 4">  Mi</option>
+                        <option value="Fá   349 4">  Fá</option>
+                        <option value="Fá#  370 4">  Fá#</option>
+                        <option value="Sol  392 4">  Sol</option>
+                        <option value="Sol# 415 4">  Sol#</option>
+                        <option value="Lá   440 4">  Lá</option>
+                        <option value="Lá#  466 4">  Lá#</option>
+                        <option value="Sí   494 4">  Sí</option>
+                    </optgroup>
+                    <optgroup label="5ª OITAVA">
+                        <option value="Dó   523 5">  Dó</option>
+                        <option value="Dó#  554 5">  Dó#</option>
+                        <option value="Ré   587 5">  Ré</option>
+                        <option value="Ré#  622 5">  Ré#</option>
+                        <option value="Mi   659 5">  Mi</option>
+                        <option value="Fá   698 5">  Fá</option>
+                        <option value="Fá#  740 5">  Fá#</option>
+                        <option value="Sol  784 5">  Sol</option>
+                        <option value="Sol# 831 5">  Sol#</option>
+                        <option value="Lá   880 5">  Lá</option>
+                        <option value="Lá#  932 5">  Lá#</option>
+                        <option value="Sí   988 5">  Sí</option>
+                    </optgroup>
+                  </select>
+            
+                </div>
+    
+                <h1>DURAÇÃO</h1>
+                    
+              <div class="select-container">
+                  <select id="duracao" size="6">
+                    <option value="8">  (8) Breve</option>
+                    <option value="4">  (4) Semibreve</option>
+                    <option value="2">  (2) Mínima</option>
+                    <option value="1">  (1) Semínima</option>
+                    <option value="0.5">  (1/2)  Colcheia</option>
+                    <option value="0.25">  (1/4)  Semicolcheia</option>
+                    <option value="0.125">  (1/8)  Fusa</option>
+                    <option value="0.0625">  (1/16) Semifusa</option>
+                  </select>
+              </div>
+          </div>
+      
+          <br>
+      
+          <ul id="notas">
+            <!-- notas escolhidas apareceram aqui -->
+          </ul>  
+    
+          <br>
+      
+          <button id="btnAdd">Add</button>
+    
+          <button id="btnFinish">Finish</button>
+
+        </div>
+    
+      </section>
+
+    <section class="page show home">
+
+      <div class="container">
+
+        <div class="cards">
+          <div class="card">
+            <button id="goBiblioteca">
+              Ver biblioteca
+            </button>
+          </div>
+          <div class="card">
+            <button id="goNewMusic">
+              Nova música
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <section class="page biblioteca">
+
+      <div class="container">
+      </div>
+
+    </section>
+
+    <div class="modal">
+      <h1 class="title"></h1>
+      <div class="body">
+        <ul class="modal-partitura">
+          <!-- notas | tempos -->
+        </ul>
+      </div>
+      <button class="close">Fechar</button>
+    </div>
+
+    <!-- shading background -->
+    <div class="modal-state"></div>
+      
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    
+    <script src="js/main.js"/>
+    
+  </body>
+</html>
